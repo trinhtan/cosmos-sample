@@ -128,9 +128,9 @@ func GetCmdAllProducts(queryRoute string, cdc *codec.Codec) *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error {
 			cliCtx := context.NewCLIContext().WithCodec(cdc)
 
-			res, _, err := cliCtx.QueryWithData(fmt.Sprintf("custom/%s/allproducts", queryRoute), nil)
+			res, _, err := cliCtx.QueryWithData(fmt.Sprintf("custom/%s/allProducts", queryRoute), nil)
 			if err != nil {
-				fmt.Printf("could not get query names\n")
+				fmt.Printf("could not get all products\n")
 				return nil
 			}
 
